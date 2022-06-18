@@ -1,5 +1,5 @@
 %% 仿真设置
-p.simN = 5000;            % 迭代次数
+p.simN = 10000;            % 迭代次数
 p.Ts = 0.01;              % 迭代步长
 p.plotOn = true;          % 画图开关
 
@@ -24,6 +24,7 @@ p.phat = -1;
 p.c1 = 2;
 p.d1 = 2;
 p.c2 = 1;
+p.d2 = 1;
 p.Gamma = 3*eye(2*p.N+1);
 p.gamma = 3;
 p.sigma1 = 1;

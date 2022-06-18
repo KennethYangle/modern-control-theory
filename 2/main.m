@@ -26,7 +26,7 @@ end
 if p.plotOn == true
     t = p.Ts * (1: p.simN);
     figure(1);
-    plot(t, x_stash(1,:), t, x_stash(2,:));
+    plot(t, x_stash(1,:)/1.5, t, x_stash(2,:)/1.5);
     legend('x_1','x_2');
     figure(2);
     plot(t, x_stash(1,:)/1.5, t, yd_stash(:));

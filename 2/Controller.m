@@ -65,13 +65,13 @@ tau1 = p.Gamma * omega1 * z1 - p.sigma1 * p.Gamma * p.thetahat;
 % omega2
 omega2 = [palpha1_py * (Xi2 + H1), z1 - palpha1_py * lambda2]';
 % 调节函数2
-tau2 = tau1 + omega2 * z2;
+tau2 = tau1 + p.Gamma*omega2 * z2;
 % beta2
 beta2 = -lambda1 - palpha1_py * xi2 - (palpha1_pyd * dyd + palpha1_pdyd * ddyd + dXi(2,:) * palpha1_pXi2 + palpha1_pphat * dphat);
 
 %% 自适应律和控制率
 dthetahat = tau2;
 p.thetahat = p.thetahat + dthetahat * p.Ts;
-u = -p.c2*z2 - beta2 - p.thetahat'*omega2 - p.d1*z2*palpha1_py^2 + palpha1_pthetahat*tau2;
+u = -p.c2*z2 - beta2 - p.thetahat'*omega2 - p.d2*z2*palpha1_py^2 + palpha1_pthetahat*tau2;
 p.ModelParams.u = u;
 end
