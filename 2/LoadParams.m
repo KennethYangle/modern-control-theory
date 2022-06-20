@@ -21,7 +21,7 @@ p.lambda = zeros(2,1);
 p.phat = -1;
 
 %% 设计参数
-p.c1 = 2;
+p.c1 = 3;
 p.d1 = 2;
 p.c2 = 1;
 p.d2 = 1;

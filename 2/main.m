@@ -31,4 +31,5 @@ if p.plotOn == true
     figure(2);
     plot(t, x_stash(1,:)/1.5, t, yd_stash(:));
     legend('y','y_d');
+    grid on;
 end
